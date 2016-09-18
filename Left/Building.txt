@@ -10,6 +10,8 @@ public class Building {
 	}
     
     
+
+    //public test
     public String readMode() {
          return "";
     }
