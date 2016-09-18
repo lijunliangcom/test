@@ -1,0 +1,145 @@
+public class Building {
+    private int entrance ?
+    private int bottom?
+    private int top?
+    private LinkedList<Lift> lifts = new LinkedList<>()?
+    private LinkedList<Person> people = new LinkedList<Person>()?
+    private String mode?
+    public static void main(String[] args) {
+		new Building().use();
+	}
+    
+    
+    public String readMode() {
+         return "";
+    }
+    
+    
+    
+    
+    public Building() {
+        people.add(new Person(id,name,level));
+        entrance = 2;
+        lifts.add(new Lift (number,bottom,top,entrance));
+    }
+     /*private String level() {
+         
+     }*/    
+    
+    public void use() {
+		char choice;
+		while ((choice = readChoice()) != 'x') {
+			switch (choice) {
+			case 'a': addPerson(); break;
+			case 'r': removePerson(); break;
+			case 'p': showPeople(); break;
+                        case 'c': callLift(); break;
+                        case 'l': showLifts(); break;
+                        case 'o': operate(); break;
+                        
+			// It is not good to skip the default case
+			}
+		}
+	}
+    
+    private char readChoice() {
+		System.out.print("Choice (a/r/p/c/l/o/x) ");
+		return In.nextChar();
+	}
+    
+    public int addPerson(){
+        System.out.print("Person ID: ");
+        return In.nextInt();
+    }
+    
+    public int removePerson() {
+        System.out.print("Person ID: ");
+        return In.nextInt();
+    }
+    
+    public void showPeople() {
+        //System.out.print(name + "on level" + level);
+        
+    }
+    
+    
+    public void callLift() {
+        
+    }
+    
+    public void showLifts(){
+        view();
+    }
+
+    public void operate() {
+        
+    }
+    
+    
+    
+    public String readName() {
+        return "";
+    }
+    
+    public int readDestination() {
+        return 1;
+    }
+    
+    public int readPersonId() {
+        return 1;
+    }
+
+   
+    
+    /*private boolean lifts( String partialName) 
+    {   
+
+        for (Lift lift : lifts) 
+        {      
+            if(lift.contains(partialName))
+            {                     
+                return true;
+            }
+
+        }
+
+        return false;
+    }*/
+    
+    /*public Person person(int id) {
+        
+    }*/
+    
+    private void view() {
+		System.out.println(this);
+	}
+    
+    @Override
+	public String toString() {
+		String s = "";
+		for (int i = entrance; i < bottom; i++)
+			s += "Lift "+ number;
+		s += "|";
+		for (int i = bottom; i <= top; i++)
+			if (i == entrance)
+				s += "#";
+			else
+				s += "-";
+		s += "|";
+		return s;
+	}
+
+    public void help() {
+        System.out.println("Menu options");
+        System.out.println("a = addPerson");
+        System.out.println("r = removePerson");
+        System.out.println("p = showPeople");
+        System.out.println("c = callLift");
+        System.out.println("l = showLifts");
+        System.out.println("o = operate");
+        System.out.println("x = exit");
+    }
+
+    
+
+}

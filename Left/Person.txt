@@ -1,0 +1,32 @@
+public class Person {
+    private int id?
+    private String name?
+    private int level?
+    private int destination?
+    private boolean aboard? 
+    
+    public Person(int id, String name, int level){
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.destination =this.level;
+        this.aboard = false;
+    }
+    public void call(int destination) {
+         destination = level;
+             
+    }
+    
+    public void move(int direction) {
+         this.level+=direction;
+         
+    }
+    
+    public void board() {
+        
+    }
+    
+    public void alight() {
+        
+    }
+}

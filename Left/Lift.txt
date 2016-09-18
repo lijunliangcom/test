@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class Lift {
+private int number?
+private int bottom?
+private int top?
+private int level?
+private int direction?
+private LinkedList<Person> person = new LinkedList<Person>()?
+private LinkedList<Person> queue = new LinkedList<Person>()?
+
+public static void main(String[] args) {
+		new Lift().use();
+	}
+        public Lift(Person person) {
+       
+        
+        }
+        
+        public void board(Person person) {
+            
+        }
+        
+        public void alight(Person person) {
+            
+        }
+        
+        public void operate() {
+            
+        }
+        
+        private Lift lift(String name) {
+ 
+  
+
+        return null;
+    }    
+        
+}
